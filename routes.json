@@ -4,6 +4,14 @@
     "Homepage": {
       "path": "/",
       "page": "pages/hello-world.js"
+    },
+    "Test": {
+      "path": "/test",
+      "page": "pages/test.js"
+    },
+    "User": {
+      "path": "/user",
+      "page": "pages/User.js"
     }
   }
 }
