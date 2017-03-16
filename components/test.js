@@ -1,7 +1,7 @@
 import React from 'react';
-import {logging} from 'react-server';
+// import {logging} from 'react-server';
 
-const logger = logging.getLogger(__LOGGER__);
+// const logger = logging.getLogger(__LOGGER__);
 
 export default class Test extends React.Component{
   constructor(props){

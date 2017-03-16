@@ -8,6 +8,6 @@ export default class UserPage {
 	}
 
 	getElements() {
-		return <div>This is User.</div>
+		return <div>This is User.</div>;
 	}
 }
