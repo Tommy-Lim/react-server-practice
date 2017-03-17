@@ -1,16 +1,18 @@
 import React from 'react';
-// import {logging} from 'react-server';
+import {logging} from 'react-server';
 
-// const logger = logging.getLogger(__LOGGER__);
+const logger = logging.getLogger(__LOGGER__);
 
 export default class HelloWorld extends React.Component {
 	constructor(props) {
 		super(props);
+
 		this.state = {
 			exclamationCount: 0
 		};
+
 		this.handleClick = () => {
-			// logger.info(`Getting more excited! previously ${this.state.exclamationCount} excitements.`);
+			logger.info(`Getting more excited! previously ${this.state.exclamationCount} excitements.`);
 			this.setState({exclamationCount: this.state.exclamationCount + 1});
 		};
 
@@ -19,8 +21,8 @@ export default class HelloWorld extends React.Component {
 	render() {
 		return (
 			<div>
-				<h2>Hello, World{'!'.repeat(this.state.exclamationCount)}</h2>
-				<button onClick={this.handleClick()}>Get More Excited!</button>
+				<h2>Exclamation Count: {this.state.exclamationCount}</h2>
+				<button onClick={this.handleClick}>Get More Excited!</button>
 			</div>
 		);
 	}
