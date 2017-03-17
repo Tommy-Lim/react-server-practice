@@ -1,10 +1,9 @@
 import React from 'react';
-import axios from 'axios';
-
+import MovieList from '../components/movie-list'
 
 export default class TodosPage{
   getElements(){
-    return <TodoList/>;
+    return <MovieList/>;
   }
 
   getMetaTags() {
