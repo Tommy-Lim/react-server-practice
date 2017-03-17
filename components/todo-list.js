@@ -19,21 +19,36 @@ export default class TodoList extends React.Component{
           id:3,
           text: "three"
         }
-      ]
+      ],
+      newItem: '',
     };
 
-    this.addItem = () => {
-      console.log("hit!");
-
-      this.state.todos.push({
-        id: "#",
-        text: "test text"
+    this.addItem = (e) => {
+      e.preventDefault();
+      var todos = this.state.todos
+      todos.push({
+        id: this.state.todos.length + 1,
+        text: this.state.newItem
       })
 
       this.setState({
-        todos: this.state.todos
+        todos: todos,
+        newItem: '',
       });
+
     };
+
+    this.editNewItem = (e) => {
+      this.setState({
+        newItem: e.target.value
+      })
+    }
+
+    this.clearItems = () => {
+      this.setState({
+        todos: []
+      })
+    }
   }
 
   render(){
@@ -42,7 +57,17 @@ export default class TodoList extends React.Component{
         {this.state.todos.map(function(todo, index){
           return <TodoItem id={todo.id} text={todo.text} key={index}/>;
         })}
-        <button onClick={this.addItem}>Print</button>
+
+        <form onSubmit={this.addItem}>
+          <input
+            type="text"
+            placeholder="text here"
+            onChange={this.editNewItem}
+            value={this.state.newItem}
+            />
+        </form>
+
+        <button onClick={this.clearItems}>Clear</button>
       </div>
     )
   }
