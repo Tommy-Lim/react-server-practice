@@ -11,7 +11,11 @@
     },
     "User": {
       "path": "/user",
-      "page": "pages/User.js"
+      "page": "pages/user.js"
+    },
+    "Todos": {
+      "path": "/todos",
+      "page": "pages/todos.js"
     }
   }
 }
