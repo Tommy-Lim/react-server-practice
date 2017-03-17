@@ -16,6 +16,10 @@
     "Todos": {
       "path": "/todos",
       "page": "pages/todos.js"
+    },
+    "Movies": {
+      "path": "/movies",
+      "page": "pages/movies.js"
     }
   }
 }
