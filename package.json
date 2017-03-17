@@ -8,7 +8,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom && npm run lint && nsp check && ava test.js",
     "eject": "react-scripts eject",
-    "lint": "eslint test.js pages",
+    "lint": "eslint test.js pages"
   },
   "license": "Apache-2.0",
   "dependencies": {

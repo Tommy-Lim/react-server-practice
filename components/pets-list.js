@@ -1,11 +1,12 @@
 import React from 'react';
 import PetItem from './pet-item';
 import axios from 'axios';
-require('dotenv').config();
 
 export default class PetsList extends React.Component{
   constructor(props){
     super(props);
+
+    var key="496f545b56c383d262c9445baca74e87";
 
     this.state = {
       pets: [],
@@ -15,14 +16,27 @@ export default class PetsList extends React.Component{
 
     this.changeQuery = (e) => {
       console.log(e.target.value);
-      console.log(process.env.REACT_APP_PET_API_KEY);
       this.setState({
         query: e.target.value
       })
     }
 
-    this.findPets = () => {
-      axios.get('')
+    this.findPets = (e) => {
+      e.preventDefault();
+      axios.get('http://api.petfinder.com/pet.getRandom/', {
+        params: {
+          key: key,
+        },
+        headers:{
+          'Access-Control-Allow-Origin': '*'
+        }
+      })
+      .then(function(response){
+        console.log(response);
+      })
+      .catch(function(error){
+        console.log(error)
+      })
     }
   }
 
