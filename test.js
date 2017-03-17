@@ -1,6 +1,7 @@
 import cp from 'child_process';
 import http from 'http';
 import test from 'ava';
+require('dotenv').config()
 
 let rs;
 

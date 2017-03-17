@@ -8,7 +8,8 @@
   },
   "globals": {
     "__LOGGER__": false,
-    "SERVER_SIDE": false
+    "SERVER_SIDE": false,
+    "process.env": true
   },
   "env": {
     "browser": true,

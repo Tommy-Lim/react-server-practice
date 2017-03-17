@@ -20,6 +20,10 @@
     "Movies": {
       "path": "/movies",
       "page": "pages/movies.js"
+    },
+    "Pets": {
+      "path": "/pets",
+      "page": "pages/pets.js"
     }
   }
 }

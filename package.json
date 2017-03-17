@@ -5,16 +5,21 @@
   "main": "HelloWorld.js",
   "scripts": {
     "start": "react-server start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom && npm run lint && nsp check && ava test.js",
+    "eject": "react-scripts eject",
     "lint": "eslint test.js pages",
-    "test": "npm run lint && nsp check && ava test.js"
   },
   "license": "Apache-2.0",
   "dependencies": {
     "axios": "^0.15.3",
     "babel-preset-react-server": "^0.4.10",
     "babel-runtime": "^6.6.1",
+    "dotenv": "^4.0.0",
+    "fs": "0.0.1-security",
     "react": "~0.14.2",
     "react-dom": "~0.14.2",
+    "react-scripts": "^0.9.5",
     "react-server": "^0.4.6",
     "react-server-cli": "^0.4.6",
     "superagent": "1.8.4"
